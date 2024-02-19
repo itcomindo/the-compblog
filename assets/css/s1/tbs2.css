@@ -1,0 +1,39 @@
+/**
+=========================
+* topbar
+*=========================
+*/
+
+#tb {
+  height: 40px;
+}
+
+#tb-wr {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#tb-left,
+#tb-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#tb-right {
+  align-items: end;
+}
+
+/**
+=========================
+* Topbar Style 2
+* @todo Topbar Style 2
+*=========================
+*/
+
+.tbs2 {
+  background-color: darkred;
+  color: whitesmoke;
+}

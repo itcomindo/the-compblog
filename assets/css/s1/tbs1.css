@@ -1,0 +1,88 @@
+/**
+=========================
+* topbar
+*=========================
+*/
+
+#tb {
+  height: 40px;
+}
+
+#tb-wr {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#tb-left,
+#tb-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#tb-right {
+  align-items: end;
+}
+/**
+=========================
+* Topbar Style 1
+* @todo Topbar Style 1
+*=========================
+*/
+
+.tbs1 {
+  background-color: var(--color-light-1);
+  color: var(--color-dark-3);
+  z-index: 0;
+}
+.tbs1:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--color-accent-1-dark) 50%,
+    var(--color-light-1) 50%
+  );
+  z-index: -1;
+}
+
+.tbs1 #tb-right:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 20px solid var(--color-accent-1-dark);
+  border-left: 20px solid var(--color-accent-1-dark);
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.tbs1 #tb-left {
+  color: var(--color-light-1);
+}
+
+.tbs1 .search-form {
+  box-sizing: border-box;
+  font-size: 90%;
+}
+.tbs1 .search-field {
+  box-sizing: border-box;
+  border: 1px solid var(--transparent-dark-3);
+  margin-right: 4px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.tbs1 input.btn {
+  border: 1px solid var(--transparent-dark-3);
+  font-size: 80%;
+  background-color: var(--color-accent-1-dark);
+  color: var(--color-light-1);
+  padding: 4px 16px;
+  border-radius: 5px;
+}

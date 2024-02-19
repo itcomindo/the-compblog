@@ -1,0 +1,20 @@
+.cbsep-pr {
+  background-color: black;
+  padding: 4px 12px !important;
+}
+.cbsep-ch h3,
+.cbsep-pr h3 {
+  color: whitesmoke;
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.cbsep-ch {
+  background-color: #333;
+  padding: 4px 12px !important;
+}
+.cbsep-ch h3 {
+  font-size: 14px;
+  margin: 2px 0;
+  line-height: 1;
+}
