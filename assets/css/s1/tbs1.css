@@ -47,7 +47,7 @@
   background: linear-gradient(
     to right,
     var(--color-accent-1-dark) 50%,
-    var(--color-light-1) 50%
+    var(--color-light-3) 50%
   );
   z-index: -1;
 }
@@ -85,4 +85,34 @@
   color: var(--color-light-1);
   padding: 4px 16px;
   border-radius: 5px;
+}
+
+/**
+=========================
+* Topbar Style 1 Media Query
+* @todo Topbar Style 1 Media Query
+*=========================
+*/
+
+/**
+=========================
+* 767px
+* @todo 767px
+*=========================
+*/
+@media screen and (max-width: 767px) {
+  .tbs1:before {
+    background: linear-gradient(
+      to bottom,
+      var(--color-accent-1),
+      var(--color-accent-1-dark)
+    );
+  }
+  .tbs1 #tb-left {
+    align-items: center;
+    text-align: center;
+  }
+  .tbs1 #tb-right {
+    display: none;
+  }
 }

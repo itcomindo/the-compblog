@@ -30,6 +30,9 @@ defined('ABSPATH') || exit;
     }
 
 
+    get_template_part('sections/header-section');
+
+
 
     wp_body_open();
     ?>

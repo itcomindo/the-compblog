@@ -1,0 +1,126 @@
+.header1 {
+  height: 120px;
+  background-color: aliceblue;
+}
+
+.header1 #header-wr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header1 #header-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-grow: 1;
+}
+.header1 #header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.header1 nav#header-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+ul.horizonal-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+ul.horizonal-menu li {
+  padding: 0 10px;
+  margin: 0 10px;
+}
+ul.horizonal-menu li a {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.header-menu-trigger {
+  display: none;
+}
+
+.compbox {
+  display: none;
+}
+
+/**
+=========================
+* Header 1 Media Query
+* @todo Header 1 Media Query
+*=========================
+*/
+
+/**
+=========================
+* 767px
+* @todo 767px
+*=========================
+*/
+@media screen and (max-width: 767px) {
+  .header-menu-trigger {
+    display: block;
+  }
+  .header1 nav#header-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark-1);
+    color: var(--color-light-1);
+    z-index: 777;
+    justify-content: start;
+    padding: 2rem 8px;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: 0.2s linear all;
+  }
+  .header1 nav#header-menu.active {
+    visibility: visible;
+    transform: translateX(0);
+    transition: 0.2s linear all;
+  }
+  .header1 #header-right {
+    width: 40px;
+  }
+  ul.horizonal-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 2rem;
+  }
+  ul.horizonal-menu li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-bottom: 1px dashed var(--transparent-light-2);
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+  .compbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  ul.compbox-cta {
+    margin-top: 1rem;
+  }
+}

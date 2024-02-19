@@ -11,7 +11,11 @@ function mm_get_website_options()
     $wo = array();
 
     //nama perusahaan
-    $wo['nama-perusahaan'] = carbon_get_theme_option('nama_perusahaan');
+    if (carbon_get_theme_option('nama_perusahaan')) {
+        $wo['nama-perusahaan'] = carbon_get_theme_option('nama_perusahaan');
+    } else {
+        $wo['nama-perusahaan'] = get_bloginfo('name');
+    }
 
     //deskripsi perusahaan
     $wo['deskripsi-perusahaan'] = carbon_get_theme_option('deskripsi_perusahaan');
@@ -20,7 +24,7 @@ function mm_get_website_options()
     $wo['alamat-perusahaan'] = carbon_get_theme_option('alamat_perusahaan');
 
     //nomor telepon kantor perusahaan
-    $wo['telepon-kantor-perusahaan'] = carbon_get_theme_option('nomor_telepon_perusahaan');
+    $wo['telepon-kantor-perusahaan'] = carbon_get_theme_option('nomor_telepon_kantor');
 
     //nomor handphone perusahaan
     $wo['handphone-perusahaan'] = carbon_get_theme_option('nomor_handphone_perusahaan');
@@ -42,6 +46,8 @@ function mm_get_website_options()
 
     //google map perusahaan
     $wo['google-map-perusahaan'] = carbon_get_theme_option('google_map_perusahaan');
+
+    return $wo;
 }
 
 

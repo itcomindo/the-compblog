@@ -185,6 +185,27 @@ div {
   overflow: visible !important;
 }
 
+.header-menu-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/**
+=========================
+* Cursor
+* @todo Cursor
+*=========================
+*/
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /**
 =========================
 * Flexbox
@@ -471,7 +492,7 @@ ul.list-no-style.horizontal-list {
   justify-content: center;
 }
 ul.list-no-style.horizontal-list li {
-  margin: 0 1rem;
+  margin: 0 8px;
 }
 
 ul.vertical-menu {
@@ -488,6 +509,10 @@ ul.vertical-menu li {
 ul.vertical-menu li a {
   width: 100%;
   display: block;
+}
+
+.header-menu-trigger {
+  font-size: var(--font-clamp-2);
 }
 
 /**
@@ -531,6 +556,11 @@ a.btn.flex i {
   margin-right: 6px;
 }
 
+a.btn.call-bg i,
+a.btn.email-bg i,
+a.btn.wa-bg i {
+  margin-right: 4px;
+}
 a.btn.call-bg,
 a.btn.email-bg,
 a.btn.wa-bg {
@@ -541,6 +571,7 @@ a.btn.wa-bg {
   align-items: center;
   background-color: black;
   color: white;
+  padding: 4px 1rem;
 }
 a.btn.wa-bg:before {
   content: "";

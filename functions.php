@@ -52,3 +52,5 @@ function load_cf_fields()
 require_once get_template_directory() . '/assets/assets.php';
 require_once get_template_directory() . '/options/options.php';
 require_once get_template_directory() . '/plugins/plugins.php';
+require_once get_template_directory() . '/inc/inc.php';
+require_once get_template_directory() . '/components/components.php';

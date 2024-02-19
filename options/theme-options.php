@@ -27,6 +27,15 @@ function mm_global_theme_options()
 
 
 
+    // Header Options
+    Container::make('theme_options', 'Header')
+        ->set_page_parent($fields_container)
+        ->add_fields([
+            ...mm_header_options(),
+        ]);
+
+
+
     // topbar Options
     Container::make('theme_options', 'Topbar')
         ->set_page_parent($fields_container)

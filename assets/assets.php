@@ -26,6 +26,19 @@ function mm_load_styles_and_scripts()
 
     //load front-page.css from assets/css directory
     wp_enqueue_style('front-page-css', get_template_directory_uri() . '/assets/css/front-page.css', array('theme-style'), $version, 'all');
+
+    /**
+     * Load JavaScript
+     */
+
+    //dequeue wordpress jquery current version
+    wp_deregister_script('jquery');
+
+    //load jquery from cdn
+    wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js', array(), '3.7.0', true);
+
+    //load global.js from assets/js directory
+    wp_enqueue_script('global-js', get_template_directory_uri() . '/assets/js/global.js', array('jquery'), $version, true);
 }
 
 add_action('wp_enqueue_scripts', 'mm_load_styles_and_scripts');
